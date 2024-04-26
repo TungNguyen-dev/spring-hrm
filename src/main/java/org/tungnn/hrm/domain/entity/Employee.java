@@ -2,24 +2,15 @@ package org.tungnn.hrm.domain.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "employees")
 public class Employee extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
-
     @Column(name = "employee_code", length = 10)
     private String employeeCode;
 
@@ -42,14 +33,6 @@ public class Employee extends BaseEntity {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getEmployeeCode() {

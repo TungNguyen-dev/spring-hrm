@@ -3,23 +3,23 @@ package org.tungnn.hrm.api.dto;
 import java.time.LocalDateTime;
 
 public class CompanyDTO {
-    private Integer id;
+    private Long id;
     private String name;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public CompanyDTO(Integer id, String name, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public CompanyDTO(Long id, String name, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
